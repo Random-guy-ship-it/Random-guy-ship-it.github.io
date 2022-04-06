@@ -1,0 +1,158 @@
+
+/* Personalización de Pico.css. Los estilos fueron tomados de https://picocss.com/docs/customization.html */
+
+:root {
+  --primary: #5e35b1;
+  --font-family: 'Open Sans', sans-serif;
+}
+
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --primary: #5e35b1;
+  --primary-hover: #512da8;
+  --primary-focus: rgba(94, 53, 177, 0.125);
+  --primary-inverse: #FFF;
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --primary: #5e35b1;
+    --primary-hover: #673ab7;
+    --primary-focus: rgba(94, 53, 177, 0.25);
+    --primary-inverse: #FFF;
+  }
+}
+
+[data-theme="dark"] {
+  --primary: #5e35b1;
+  --primary-hover: #673ab7;
+  --primary-focus: rgba(94, 53, 177, 0.25);
+  --primary-inverse: #FFF;
+}
+
+:root {
+  --form-element-active-border-color: var(--primary);
+  --form-element-focus-color: var(--primary-focus);
+  --switch-color: var(--primary-inverse);
+  --switch-checked-background-color: var(--primary);
+}
+
+/* Personalización de Pico.css*/
+
+
+/* Clases propias con el objetivo de retocar un poco los estilos*/
+
+.center-container {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.background-image {
+  background-image: url("./imagenes/cool-background.png");
+  background-size: cover;
+}
+
+nav {
+  border-bottom: 1px solid #f3f4f5;
+  box-shadow: var(--card-box-shadow);
+}
+
+.header-fluid {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.footer-fluid {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+@media (min-width: 992px) {
+  h2 {
+    text-align: center;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.margin-right {
+  margin-right: 0.625rem;
+}
+
+@media (min-width: 992px) {
+  .order-1 {
+    order: 1;
+  }
+}
+
+@media (min-width: 992px) {
+  .order-2 {
+    order: 2;
+  }
+}
+
+@media (max-width: 991px) {
+  .margin-bottom-mobile {
+    margin-bottom: 1.5rem;
+  }
+
+}
+
+@media (max-width: 991px) {
+  .margin-bottom-mobile-footer {
+    margin-bottom: 1rem;
+  }
+
+}
+
+/* Clases propias*/
+
+
+/* Creación de un Grid específico para lograr un layout diferente en tablets */
+
+/* Grid de pico.css */
+
+.grid-nuevo {
+
+  grid-column-gap: var(--grid-spacing-horizontal);
+  grid-row-gap: var(--grid-spacing-vertical);
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0;
+
+}
+
+@media (min-width: 992px) {
+  .grid-nuevo {
+    grid-template-columns: repeat(auto-fit, minmax(0%, 1fr));
+  }
+}
+
+.grid-nuevo > * {
+  min-width: 0;
+}
+
+@media (min-width: 992px) {
+  .margin-botton-desktop {
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Grid de pico.css */
+
+/* Personalización del Grid */
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .grid-nuevo {
+     grid-template-columns: 1fr 1fr;
+  }
+  
+}
+
+/* Personalización del Grid */
+
+/* Creación de un Grid específico */
+
